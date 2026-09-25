@@ -26,7 +26,7 @@ export default function Menu() {
   }, []);
 
   return (
-    <section id="services" className="relative scroll-mt-24 bg-ivory py-24 sm:py-32">
+    <section id="services" className="relative scroll-mt-40 bg-ivory py-24 sm:py-32">
       {/* soft background flourish */}
       <div
         aria-hidden="true"

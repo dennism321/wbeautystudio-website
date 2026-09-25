@@ -63,13 +63,13 @@ function Navbar() {
           <a href="#top" className="flex items-center" aria-label="WBeauty Studio home">
             {dark ? (
               <>
-                <LogoMark tone="white" className="h-12 w-auto sm:hidden" />
-                <Logo tone="white" className="hidden h-14 w-auto sm:block sm:h-16" />
+                <LogoMark tone="white" className="h-24 w-auto sm:hidden" />
+                <Logo tone="white" className="hidden h-28 w-auto sm:block sm:h-32" />
               </>
             ) : (
               <>
-                <LogoMark tone="cocoa" className="h-12 w-auto sm:hidden" />
-                <Logo tone="cocoa" className="hidden h-14 w-auto sm:block sm:h-16" />
+                <LogoMark tone="cocoa" className="h-24 w-auto sm:hidden" />
+                <Logo tone="cocoa" className="hidden h-28 w-auto sm:block sm:h-32" />
               </>
             )}
           </a>
@@ -122,7 +122,7 @@ function Navbar() {
           open ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <div className="flex h-full flex-col px-8 pb-10 pt-28">
+        <div className="flex h-full flex-col px-8 pb-10 pt-52">
           <div className="flex flex-col gap-7">
             {navLinks.map((link, i) => (
               <a
@@ -166,7 +166,7 @@ function Hero() {
         <div className="absolute inset-0 bg-gradient-to-t from-mocha-900/70 via-transparent to-mocha-900/30" />
       </div>
 
-      <div className="relative mx-auto w-full max-w-7xl px-5 pb-24 pt-40 sm:px-8">
+      <div className="relative mx-auto w-full max-w-7xl px-5 pb-24 pt-56 sm:px-8">
         <div className="max-w-2xl text-white">
           <Reveal>
             <span className="ornament text-[11px] font-medium uppercase tracking-[0.38em] text-blush-200">
@@ -251,7 +251,7 @@ function Marquee() {
 
 function About() {
   return (
-    <section id="about" className="relative scroll-mt-24 overflow-hidden bg-ivory py-24 sm:py-32">
+    <section id="about" className="relative scroll-mt-40 overflow-hidden bg-ivory py-24 sm:py-32">
       <div className="mx-auto grid max-w-7xl items-center gap-16 px-5 sm:px-8 lg:grid-cols-2">
         {/* Imagery */}
         <Reveal className="relative">
@@ -496,7 +496,7 @@ function WhyUs() {
 
 function Reviews() {
   return (
-    <section id="reviews" className="relative scroll-mt-24 bg-cream py-24 sm:py-32">
+    <section id="reviews" className="relative scroll-mt-40 bg-cream py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeading
           eyebrow="Kind Words"
@@ -557,7 +557,7 @@ function Reviews() {
 
 function Visit() {
   return (
-    <section id="visit" className="relative scroll-mt-24 bg-mocha-900 py-24 text-ivory sm:py-32">
+    <section id="visit" className="relative scroll-mt-40 bg-mocha-900 py-24 text-ivory sm:py-32">
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 opacity-60"
