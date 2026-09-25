@@ -63,12 +63,12 @@ function Navbar() {
           <a href="#top" className="flex items-center" aria-label="WBeauty Studio home">
             {dark ? (
               <>
-                <LogoMark tone="white" className="h-24 w-auto sm:hidden" />
+                <LogoMark tone="white" className="h-24 w-auto transition-all duration-500 sm:hidden" />
                 <Logo tone="white" className="hidden h-28 w-auto sm:block sm:h-32" />
               </>
             ) : (
               <>
-                <LogoMark tone="cocoa" className="h-24 w-auto sm:hidden" />
+                <LogoMark tone="cocoa" className={`${scrolled && !open ? "h-12" : "h-24"} w-auto transition-all duration-500 sm:hidden`} />
                 <Logo tone="cocoa" className="hidden h-28 w-auto sm:block sm:h-32" />
               </>
             )}
@@ -140,7 +140,7 @@ function Navbar() {
             <BookButton className="w-full">Book Your Visit</BookButton>
             <div className="flex items-center justify-between">
               <SocialButtons tone="light" />
-              <a href={business.phoneHref} className="text-sm tracking-[0.18em] text-mocha-600">
+              <a href={business.phoneHref} className="py-3 text-sm tracking-[0.18em] text-mocha-600">
                 {business.phone}
               </a>
             </div>
@@ -155,7 +155,7 @@ function Navbar() {
 
 function Hero() {
   return (
-    <section id="top" className="relative flex min-h-screen items-center overflow-hidden">
+    <section id="top" className="relative flex min-h-svh items-center overflow-hidden">
       <div className="absolute inset-0">
         <img
           src="images/hero-glow.jpg"
@@ -251,7 +251,7 @@ function Marquee() {
 
 function About() {
   return (
-    <section id="about" className="relative scroll-mt-40 overflow-hidden bg-ivory py-24 sm:py-32">
+    <section id="about" className="relative scroll-mt-20 sm:scroll-mt-40 overflow-hidden bg-ivory py-24 sm:py-32">
       <div className="mx-auto grid max-w-7xl items-center gap-16 px-5 sm:px-8 lg:grid-cols-2">
         {/* Imagery */}
         <Reveal className="relative">
@@ -496,7 +496,7 @@ function WhyUs() {
 
 function Reviews() {
   return (
-    <section id="reviews" className="relative scroll-mt-40 bg-cream py-24 sm:py-32">
+    <section id="reviews" className="relative scroll-mt-20 sm:scroll-mt-40 bg-cream py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeading
           eyebrow="Kind Words"
@@ -557,7 +557,7 @@ function Reviews() {
 
 function Visit() {
   return (
-    <section id="visit" className="relative scroll-mt-40 bg-mocha-900 py-24 text-ivory sm:py-32">
+    <section id="visit" className="relative scroll-mt-20 sm:scroll-mt-40 bg-mocha-900 py-24 text-ivory sm:py-32">
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 opacity-60"
@@ -590,7 +590,7 @@ function Visit() {
                   href={business.mapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-4 inline-flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[0.18em] text-blush-300 hover:text-blush-200"
+                  className="mt-1 inline-flex items-center gap-2 py-3 text-[12px] font-semibold uppercase tracking-[0.18em] text-blush-300 hover:text-blush-200 sm:mt-4 sm:py-0"
                 >
                   Get Directions
                   <svg viewBox="0 0 24 24" fill="none" className="h-3.5 w-3.5" stroke="currentColor" strokeWidth="2">
@@ -615,10 +615,10 @@ function Visit() {
                 </div>
                 <div className="rounded-2xl bg-white/5 p-6 ring-1 ring-white/10">
                   <p className="text-[11px] uppercase tracking-[0.24em] text-blush-300">Contact</p>
-                  <a href={business.phoneHref} className="mt-3 block font-serif text-2xl hover:text-blush-200">
+                  <a href={business.phoneHref} className="mt-1 block py-2 font-serif text-2xl hover:text-blush-200 sm:mt-3 sm:py-0">
                     {business.phone}
                   </a>
-                  <a href={business.emailHref} className="mt-2 block break-all text-sm text-ivory/75 hover:text-blush-200">
+                  <a href={business.emailHref} className="block break-all py-3 text-sm text-ivory/75 hover:text-blush-200 sm:mt-2 sm:py-0">
                     {business.email}
                   </a>
                   <div className="mt-5">
@@ -719,16 +719,16 @@ function Footer() {
 
           <div>
             <p className="text-[11px] uppercase tracking-[0.26em] text-blush-300">Explore</p>
-            <ul className="mt-5 space-y-3 text-sm text-ivory/75">
+            <ul className="mt-3 space-y-0 text-sm text-ivory/75 sm:mt-5 sm:space-y-3">
               {navLinks.map((l) => (
                 <li key={l.href}>
-                  <a href={l.href} className="transition-colors hover:text-blush-200">
+                  <a href={l.href} className="inline-block py-2.5 transition-colors hover:text-blush-200 sm:py-0">
                     {l.label}
                   </a>
                 </li>
               ))}
               <li>
-                <a href={business.bookingUrl} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-blush-200">
+                <a href={business.bookingUrl} target="_blank" rel="noopener noreferrer" className="inline-block py-2.5 transition-colors hover:text-blush-200 sm:py-0">
                   Book Online
                 </a>
               </li>
@@ -737,12 +737,12 @@ function Footer() {
 
           <div>
             <p className="text-[11px] uppercase tracking-[0.26em] text-blush-300">Services</p>
-            <ul className="mt-5 space-y-3 text-sm text-ivory/75">
-              <li><a href="#services" className="hover:text-blush-200">Glow Facials</a></li>
-              <li><a href="#services" className="hover:text-blush-200">Brows & Lashes</a></li>
-              <li><a href="#services" className="hover:text-blush-200">Body Waxing</a></li>
-              <li><a href="#services" className="hover:text-blush-200">Back Facials</a></li>
-              <li><a href="#services" className="hover:text-blush-200">LED & Nano-Infusion</a></li>
+            <ul className="mt-3 space-y-0 text-sm text-ivory/75 sm:mt-5 sm:space-y-3">
+              <li><a href="#services" className="inline-block py-2.5 hover:text-blush-200 sm:py-0">Glow Facials</a></li>
+              <li><a href="#services" className="inline-block py-2.5 hover:text-blush-200 sm:py-0">Brows & Lashes</a></li>
+              <li><a href="#services" className="inline-block py-2.5 hover:text-blush-200 sm:py-0">Body Waxing</a></li>
+              <li><a href="#services" className="inline-block py-2.5 hover:text-blush-200 sm:py-0">Back Facials</a></li>
+              <li><a href="#services" className="inline-block py-2.5 hover:text-blush-200 sm:py-0">LED & Nano-Infusion</a></li>
             </ul>
           </div>
 
@@ -755,10 +755,10 @@ function Footer() {
                 {business.city}
               </p>
               <p>
-                <a href={business.phoneHref} className="hover:text-blush-200">{business.phone}</a>
+                <a href={business.phoneHref} className="inline-block py-2.5 hover:text-blush-200 sm:py-0">{business.phone}</a>
               </p>
               <p>
-                <a href={business.emailHref} className="break-all hover:text-blush-200">{business.email}</a>
+                <a href={business.emailHref} className="inline-block break-all py-2.5 hover:text-blush-200 sm:py-0">{business.email}</a>
               </p>
             </address>
           </div>

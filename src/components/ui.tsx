@@ -31,7 +31,7 @@ export function SocialButtons({
   size?: "sm" | "md" | "lg";
 }) {
   const sizes = {
-    sm: "h-9 w-9",
+    sm: "h-11 w-11 sm:h-9 sm:w-9",
     md: "h-11 w-11",
     lg: "h-12 w-12",
   };

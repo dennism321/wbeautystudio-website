@@ -26,7 +26,7 @@ export default function Menu() {
   }, []);
 
   return (
-    <section id="services" className="relative scroll-mt-40 bg-ivory py-24 sm:py-32">
+    <section id="services" className="relative scroll-mt-20 sm:scroll-mt-40 bg-ivory py-24 sm:py-32">
       {/* soft background flourish */}
       <div
         aria-hidden="true"
@@ -56,7 +56,7 @@ export default function Menu() {
                 <button
                   key={cat}
                   onClick={() => setActive(cat)}
-                  className={`rounded-full px-5 py-2.5 text-[12px] font-medium uppercase tracking-[0.16em] transition-all duration-300 ${
+                  className={`rounded-full px-5 py-3.5 text-[12px] font-medium sm:py-2.5 uppercase tracking-[0.16em] transition-all duration-300 ${
                     isActive
                       ? "bg-mocha-700 text-ivory shadow-md shadow-mocha-700/25"
                       : "bg-white/70 text-mocha-600 ring-1 ring-mocha-200/80 hover:bg-blush-100 hover:text-mocha-800"
@@ -64,7 +64,7 @@ export default function Menu() {
                 >
                   {cat}
                   {cat !== "All" && (
-                    <span className={`ml-1.5 text-[10px] ${isActive ? "text-blush-200" : "text-mocha-400"}`}>
+                    <span className={`ml-1.5 text-[11px] ${isActive ? "text-blush-200" : "text-mocha-400"}`}>
                       {counts.get(cat)}
                     </span>
                   )}
@@ -86,7 +86,7 @@ export default function Menu() {
                 } hover:border-blush-300`}
               >
                 {service.popular && (
-                  <span className="absolute -top-3 right-6 rounded-full bg-blush-400 px-3 py-1 text-[9px] font-semibold uppercase tracking-[0.2em] text-white shadow-sm">
+                  <span className="absolute -top-3 right-6 rounded-full bg-blush-400 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-white shadow-sm">
                     Beloved
                   </span>
                 )}
@@ -127,7 +127,7 @@ export default function Menu() {
                     href={business.bookingUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 rounded-full bg-blush-100 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-mocha-700 transition-colors duration-300 hover:bg-mocha-700 hover:text-ivory"
+                    className="inline-flex items-center gap-1.5 rounded-full bg-blush-100 px-5 py-3.5 text-[11px] sm:px-4 sm:py-2 font-semibold uppercase tracking-[0.16em] text-mocha-700 transition-colors duration-300 hover:bg-mocha-700 hover:text-ivory"
                   >
                     Book
                     <svg viewBox="0 0 24 24" fill="none" className="h-3 w-3" stroke="currentColor" strokeWidth="2.2">
