@@ -158,7 +158,7 @@ function Hero() {
     <section id="top" className="relative flex min-h-screen items-center overflow-hidden">
       <div className="absolute inset-0">
         <img
-          src="/images/hero-glow.jpg"
+          src="images/hero-glow.jpg"
           alt="Serene woman with glowing, radiant skin at WBeauty Studio in Hamden"
           className="h-full w-full object-cover"
         />
@@ -262,7 +262,7 @@ function About() {
             />
             <div className="img-zoom relative overflow-hidden rounded-[2rem] shadow-[0_40px_80px_-40px_rgba(83,61,54,0.55)]">
               <img
-                src="/images/studio-interior.jpg"
+                src="images/studio-interior.jpg"
                 alt="The calm, blush-toned treatment room at WBeauty Studio"
                 className="aspect-[4/5] w-full object-cover"
               />
@@ -344,22 +344,22 @@ function About() {
 
 const highlights = [
   {
-    img: "/images/facial-treatment.jpg",
+    img: "images/facial-treatment.jpg",
     title: "Signature Facials",
     text: "Customized Circadia and Face Reality rituals — from the Golden Hour GLOW to the luxe LED-driven LuxeLift.",
   },
   {
-    img: "/images/skincare-products.jpg",
+    img: "images/skincare-products.jpg",
     title: "Advanced Technology",
     text: "Microcurrent, microdermabrasion, hydrodermabrasion, Celluma LED, oxygen and radio frequency for visible results.",
   },
   {
-    img: "/images/lashes-brows.jpg",
+    img: "images/lashes-brows.jpg",
     title: "Brows & Lashes",
     text: "Lamination, tinting, lash lifts and precision shaping that frame your face with effortless polish.",
   },
   {
-    img: "/images/body-waxing.jpg",
+    img: "images/body-waxing.jpg",
     title: "Smooth Body Waxing",
     text: "Gentle, meticulous waxing for face, bikini, arms, chest and back — silky skin that lasts for weeks.",
   },
@@ -443,7 +443,7 @@ function WhyUs() {
         <Reveal className="relative">
           <div className="img-zoom h-full min-h-[460px] overflow-hidden rounded-[2rem] shadow-[0_40px_80px_-40px_rgba(83,61,54,0.55)]">
             <img
-              src="/images/facial-treatment.jpg"
+              src="images/facial-treatment.jpg"
               alt="Guest relaxing during a facial at WBeauty Studio"
               className="h-full w-full object-cover"
             />
@@ -783,7 +783,7 @@ export default function App() {
     "@context": "https://schema.org",
     "@type": "BeautySalon",
     name: business.name,
-    image: "/images/hero-glow.jpg",
+    image: "images/hero-glow.jpg",
     telephone: business.phone,
     email: business.email,
     url: business.linktree,
