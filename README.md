@@ -4,7 +4,7 @@ React + Vite + Tailwind CSS site.
 
 ## Run locally
 
-Requires Node.js 20+.
+Requires Node.js 22.12+ (or 20.19+).
 
 ```bash
 npm install
